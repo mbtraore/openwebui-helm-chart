@@ -12,7 +12,7 @@ entries:
           description: remove duplicated environment variables already defined in Dockerfile
     apiVersion: v2
     appVersion: 0.3.11
-    created: "2024-10-16T15:16:31.872621+02:00"
+    created: "2024-10-16T15:25:36.319611+02:00"
     description: Get up and running with large language models locally.
     digest: 6389e17ed5da81af54ddb3a6c86ee6b4186917388a46a8015c85f4119679ee85
     home: https://ollama.ai/
@@ -34,12 +34,51 @@ entries:
     urls:
     - https://mbtraore.github.io/openwebui-helm-chart/charts/ollama-0.59.0.tgz
     version: 0.59.0
+  open-webui:
+  - annotations:
+      licenses: MIT
+    apiVersion: v2
+    appVersion: 0.3.32
+    created: "2024-10-16T15:25:36.318281+02:00"
+    dependencies:
+    - condition: ollama.enabled
+      import-values:
+      - child: service
+        parent: ollama.service
+      name: ollama
+      repository: https://otwld.github.io/ollama-helm/
+      version: '>=0.24.0'
+    - condition: pipelines.enabled
+      import-values:
+      - child: service
+        parent: pipelines.service
+      name: pipelines
+      repository: https://helm.openwebui.com
+      version: '>=0.0.1'
+    description: "Open WebUI: A User-Friendly Web Interface for Chat Interactions
+      \U0001F44B"
+    digest: bcd834fc092f4f99df67fa3857f38ad9e4cca431149c158fa38c08dfea11e849
+    home: https://www.openwebui.com/
+    icon: https://raw.githubusercontent.com/open-webui/open-webui/main/static/favicon.png
+    keywords:
+    - llm
+    - chat
+    - web-ui
+    name: open-webui
+    sources:
+    - https://github.com/open-webui/helm-charts
+    - https://github.com/open-webui/open-webui/pkgs/container/open-webui
+    - https://github.com/otwld/ollama-helm/
+    - https://hub.docker.com/r/ollama/ollama
+    urls:
+    - https://mbtraore.github.io/openwebui-helm-chart/open-webui-3.3.2.tgz
+    version: 3.3.2
   pipelines:
   - annotations:
       licenses: MIT
     apiVersion: v2
     appVersion: alpha
-    created: "2024-10-16T15:16:31.873211+02:00"
+    created: "2024-10-16T15:25:36.31999+02:00"
     description: 'Pipelines: UI-Agnostic OpenAI API Plugin Framework'
     digest: ab13acb3869193ec3fcdea3c0ff59e5ef85d997322bd7b2444cdbfce998709cc
     home: https://github.com/open-webui/pipelines
@@ -55,4 +94,4 @@ entries:
     urls:
     - https://mbtraore.github.io/openwebui-helm-chart/charts/pipelines-0.0.4.tgz
     version: 0.0.4
-generated: "2024-10-16T15:16:31.870178+02:00"
+generated: "2024-10-16T15:25:36.314158+02:00"
