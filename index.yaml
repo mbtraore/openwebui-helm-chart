@@ -12,7 +12,7 @@ entries:
           description: remove duplicated environment variables already defined in Dockerfile
     apiVersion: v2
     appVersion: 0.3.11
-    created: "2024-10-16T16:20:14.607943+02:00"
+    created: "2024-10-17T10:52:20.268396+02:00"
     description: Get up and running with large language models locally.
     digest: 6389e17ed5da81af54ddb3a6c86ee6b4186917388a46a8015c85f4119679ee85
     home: https://ollama.ai/
@@ -39,7 +39,7 @@ entries:
       licenses: MIT
     apiVersion: v2
     appVersion: 0.3.32
-    created: "2024-10-16T16:20:14.606626+02:00"
+    created: "2024-10-17T10:52:20.266004+02:00"
     dependencies:
     - condition: ollama.enabled
       import-values:
@@ -78,7 +78,7 @@ entries:
       licenses: MIT
     apiVersion: v2
     appVersion: alpha
-    created: "2024-10-16T16:20:14.608931+02:00"
+    created: "2024-10-17T10:52:20.268939+02:00"
     description: 'Pipelines: UI-Agnostic OpenAI API Plugin Framework'
     digest: ab13acb3869193ec3fcdea3c0ff59e5ef85d997322bd7b2444cdbfce998709cc
     home: https://github.com/open-webui/pipelines
@@ -94,4 +94,4 @@ entries:
     urls:
     - https://mbtraore.github.io/openwebui-helm-chart/charts/pipelines-0.0.4.tgz
     version: 0.0.4
-generated: "2024-10-16T16:20:14.600975+02:00"
+generated: "2024-10-17T10:52:20.260088+02:00"
